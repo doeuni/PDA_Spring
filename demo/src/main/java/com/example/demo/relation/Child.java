@@ -16,10 +16,24 @@ public class Child {
     @JoinColumn(name = "parent_id")
     private Parent parent;
 
+    public Child(){
+
+    }
     public Child(int id, String name, Parent parent) {
         this.id = id;
         this.name = name;
         this.parent = parent;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Parent getParent() {
+        return parent;
+    }
 }

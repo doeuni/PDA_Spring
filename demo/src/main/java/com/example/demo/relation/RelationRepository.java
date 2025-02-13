@@ -16,5 +16,14 @@ public class RelationRepository {
 
     public void saveParent(Parent parent){
         entityManager.persist(parent);
+
     }
+
+    //entityManger가 db랑 소통함.
+
+    //child1의 정보를 parent이름 포함해서 출력 (Select)
+    public Child findChild() {
+        return entityManager.find(Child.class, 1);
+    }
+
 }
